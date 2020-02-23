@@ -25,7 +25,7 @@ parts:
     source: https://github.com/Syllo/nvtop
     source-type: git
     plugin: cmake
-    build-environment:
+    configflags:
       - -DNVML_RETRIEVE_HEADER_ONLINE=True
       - -DCMAKE_INSTALL_PREFIX=/usr
       
