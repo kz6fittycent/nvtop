@@ -13,7 +13,7 @@ architectures:
 
 apps: 
   nvtop:
-    command: nvtop
+    command: $SNAP/usr/nvtop
     plugs:
       - home
       - hardware-observe
@@ -25,7 +25,10 @@ parts:
     source: https://github.com/Syllo/nvtop
     source-type: git
     plugin: cmake
-    
+    build-environment:
+      - -DNVML_RETRIEVE_HEADER_ONLINE=True
+      - -DCMAKE_INSTALL_PREFIX=/usr
+      
     build-packages:
       - libncurses-dev
       - libncursesw5-dev
