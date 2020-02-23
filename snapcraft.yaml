@@ -28,7 +28,7 @@ parts:
     configflags:
       - --prefix=/usr
     build-environment:
-      - DNVML_RETRIEVE_HEADER_ONLINE=True
+#      - DNVML_RETRIEVE_HEADER_ONLINE=True
       - DCMAKE_INSTALL_PREFIX=/usr
       
     build-packages:
