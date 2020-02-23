@@ -1,0 +1,35 @@
+name: nvtop
+version: git
+summary: Nvtop stands for NVidia TOP
+description: |
+  Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. It can handle multiple GPUs and print information about them in a htop familiar way.
+
+grade: devel
+confinement: devmode
+base: core18
+
+architectures:
+  - build-on: amd64
+
+apps: 
+  nvtop:
+    command: nvtop
+    plugs:
+      - home
+      - hardware-observe
+      - opengl
+      - system-observe
+
+parts:
+  nvtop:
+    source: https://github.com/Syllo/nvtop
+    source-type: git
+    plugin: cmake
+    
+    build-packages:
+      - libncurses-dev
+      - libncursesw5-dev
+      
+    stage-packages:
+      - libncurses-dev
+      - libncursesw5-dev
