@@ -27,7 +27,7 @@ parts:
     plugin: cmake
     configflags:
       - -DNVML_RETRIEVE_HEADER_ONLINE=True
-      - -DCMAKE_INSTALL_PREFIX=/usr
+#      - -DCMAKE_INSTALL_PREFIX=/usr
       
     build-packages:
       - libncurses-dev
