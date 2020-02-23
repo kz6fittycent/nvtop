@@ -2,7 +2,7 @@ name: nvtop
 version: git
 summary: Nvtop stands for NVidia TOP
 description: |
-  Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs. It can handle multiple GPUs and print information about them in a htop familiar way.
+  Nvtop stands for NVidia TOP, a (h)top like task monitor for NVIDIA GPUs
 
 grade: devel
 confinement: devmode
@@ -28,8 +28,8 @@ parts:
     configflags:
       - --prefix=/usr
     build-environment:
-      - -DNVML_RETRIEVE_HEADER_ONLINE=True
-      - -DCMAKE_INSTALL_PREFIX=/usr
+      - DNVML_RETRIEVE_HEADER_ONLINE=True
+      - DCMAKE_INSTALL_PREFIX=/usr
       
     build-packages:
       - libncurses-dev
