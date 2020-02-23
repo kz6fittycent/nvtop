@@ -27,7 +27,7 @@ parts:
     plugin: autotools
     configflags:
       - --prefix=/usr
-    build-environment:
+#    build-environment:
 #      - DNVML_RETRIEVE_HEADER_ONLINE=True
 #      - DCMAKE_INSTALL_PREFIX=/usr
       
